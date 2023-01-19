@@ -1,9 +1,13 @@
 import React, { FC, ReactElement } from "react";
 
-const Greet: FC = (): ReactElement => {
+type GreetProps = {
+  name?: string;
+};
+
+const Greet: FC<GreetProps> = ({ name }: GreetProps): ReactElement => {
   return (
     <>
-      <h1>Hello</h1>
+      <h1>Hello {name}</h1>
     </>
   );
 };
