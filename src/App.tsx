@@ -1,11 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import Counter from "./components/counter/Counter";
+import { AppProvider } from "./providers/appProvider";
+import { MuiMode } from "./components/mui/mui-mode";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <AppProvider>
+      <div className="App">
+        {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
@@ -18,8 +22,11 @@ function App() {
         >
           Learn React
         </a>
-      </header>
-    </div>
+      </header> */}
+        <MuiMode />
+        <Counter />
+      </div>
+    </AppProvider>
   );
 }
 
